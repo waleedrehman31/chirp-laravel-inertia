@@ -27,7 +27,7 @@ Route::middleware('auth')->group(function () {
 
 Route::resource('chirps', ChirpController::class)
     ->only([
-        'index', 'store'
+        'index', 'store', 'update', 'destroy'
     ])
     ->middleware([
         'auth', 'verified'
